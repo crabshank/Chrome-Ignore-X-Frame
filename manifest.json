@@ -1,0 +1,24 @@
+{
+	"name": "Ignore X-Frame",
+	"version": "2021.10",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"permissions": ["declarativeNetRequest","declarativeNetRequestFeedback"],
+	"icons": {
+		"128": "icon.png"
+	}
+}
